@@ -15,6 +15,7 @@
             width: 100%;
             height: 100%;
             font-size: 25px;
+            color: white;
         }
         #downloadApp{
             color: black;
@@ -29,5 +30,11 @@
 </head>
 <body>
     <a href="planner.apk" id="downloadApp">pobierz planner.</a>
+    <script>
+        isAndroid=/Android/i.test(navigator.userAgent)
+        if (!isAndroid){
+            document.body.innerHTML="pobranie apki chyba jest możliwe na urządzeniach z systemem android."
+        }   
+    </script>
 </body>
 </html>
